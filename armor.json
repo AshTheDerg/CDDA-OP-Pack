@@ -72,7 +72,7 @@
 	"material_thickness": 999, 
 	"environmental_protection": 9999, 
 	"qualities": [ [ "GLARE", 10 ] ], 
-	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID" ]
+	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "OVERSIZE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID" ]
   }, 
   { 
     "id": "omni_armor_on",
@@ -102,7 +102,7 @@
 	"material_thickness": 999, 
 	"environmental_protection": 9999, 
 	"qualities": [ [ "GLARE", 10 ] ], 
-	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "LIGHT_1000" ]
+	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "OVERSIZE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "LIGHT_1000" ]
   },
   {
     "id": "omni_armor_helm",
@@ -130,7 +130,7 @@
 	"warmth": 100,
 	"material_thickness": 999,
 	"environmental_protection": 9999,
-	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF" ]
+	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF" ]
   },
   {
     "id": "omni_armor_helm_on",
@@ -159,6 +159,6 @@
 	"material_thickness": 999,
 	"environmental_protection": 9999,
 	"qualities": [ [ "GLARE", 10 ] ],
-	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF", "FIX_FARSIGHT", "FIX_NEARSIGHT", "FLASH_PROTECTION", "SWIM_GOGGLES", "SUN_GLASSES" ]
+	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF", "FIX_FARSIGHT", "FIX_NEARSIGHT", "FLASH_PROTECTION", "SWIM_GOGGLES", "SUN_GLASSES", "VARSIZE" ]
   }
 ]
