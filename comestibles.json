@@ -62,16 +62,13 @@
 	  },
 	  {
 	    "type": "consume_drug",
-		"effects": [ { "id": "pkill4", "duration": 999 } ]
+		"effects": [ { "id": "pkill4", "duration": 999 }, { "id": "panacea", "duration": "60 m" }, { "id": "cureall" } ]
 	  },
 	  {
 	    "type": "PROZAC"
 	  },
 	  {
 	    "type": "PURIFIER"
-	  },
-	  {
-	    "type": "ROYAL_JELLY"
 	  },
 	  {
 	    "type": "VACCINE"
