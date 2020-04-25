@@ -10,7 +10,7 @@
   "fuel_efficiency": 2000,
   "time": 1,
   "included": true,
-  "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_SHOCKPROOF", "BIONIC_TOGGLED" ]
+  "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_SHOCKPROOF", "BIONIC_TOGGLED", "BIONIC_NPC_USABLE" ]
 },
 {
   "id": "omni_bionic_lift",
@@ -20,7 +20,7 @@
   "weight_capacity_bonus": "999999 kg",
   "stat_bonus": [ [ "STR", 5 ], [ "DEX", 5 ] ],
   "included": true,
-  "flags": [ "BIONIC_SHOCKPROOF" ]
+  "flags": [ "BIONIC_SHOCKPROOF", "BIONIC_NPC_USABLE" ]
 },
 {
   "id": "omni_bionic_enhance",
@@ -32,7 +32,7 @@
   "bash_protec": [ [ "TORSO", 9999999 ], [ "ARM_L", 9999999 ], [ "ARM_R", 9999999 ], [ "LEG_L", 9999999 ], [ "LEG_R", 9999999 ], [ "HEAD", 9999999 ], [ "EYES", 9999999 ], [ "MOUTH", 9999999 ], [ "HAND_L", 9999999 ], [ "HAND_R", 9999999 ], [ "FOOT_L", 9999999 ], [ "FOOT_R", 9999999 ] ],
   "cut_protec": [ [ "TORSO", 9999999 ], [ "ARM_L", 9999999 ], [ "ARM_R", 9999999 ], [ "LEG_L", 9999999 ], [ "LEG_R", 9999999 ], [ "HEAD", 9999999 ], [ "EYES", 9999999 ], [ "MOUTH", 9999999 ], [ "HAND_L", 9999999 ], [ "HAND_R", 9999999 ], [ "FOOT_L", 9999999 ], [ "FOOT_R", 9999999 ] ],
   "included": true,
-  "flags": [ "BIONIC_SHOCKPROOF" ]
+  "flags": [ "BIONIC_SHOCKPROOF", "BIONIC_NPC_USABLE" ]
 },
 {
   "id": "omni_bio_power",
@@ -43,8 +43,12 @@
   "description": "The Omni Corp. Bionic Power Package in a handy CBM.",
   "price": 0,
   "weight": 0,
+  "material": [ "omni_alloy" ],
   "difficulty": 0,
   "symbol": ":",
+  "color": "yellow",
+  "use_action": "install_bionic",
+  "flags": [ "CBM" ],
   "bionic_id": "omni_bionic_power",
   "is_upgrade": false
 },
@@ -57,8 +61,12 @@
   "description": "The Omni Corp. Bionic Lift Package in a handy CBM.",
   "price": 0,
   "weight": 0,
+  "material": [ "omni_alloy" ],
   "difficulty": 0,
   "symbol": ":",
+  "color": "yellow",
+  "use_action": "install_bionic",
+  "flags": [ "CBM" ],
   "bionic_id": "omni_bionic_lift",
   "is_upgrade": false
 },
@@ -71,8 +79,12 @@
   "description": "The Omni Corp. Bionic Enhancement Package in a handy CBM.",
   "price": 0,
   "weight": 0,
+  "material": [ "omni_alloy" ],
   "difficulty": 0,
   "symbol": ":",
+  "color": "yellow",
+  "use_action": "install_bionic",
+  "flags": [ "CBM" ],
   "bionic_id": "omni_bionic_enhance",
   "is_upgrade": false
 }

@@ -326,5 +326,51 @@
 	  "target": "omni_knife",
 	  "active": false
     }
+  },
+  {
+    "type": "GENERIC",
+	"looks_like": "spear_steel",
+	"id": "omni_spear",
+	"name": "Omni Corp. energy spear",
+	"name_plural": "Omni Corp. energy spears",
+	"description": "A long hafted hard-light edged spear, issued to Omni Corp. Personel in hazardous environs. The blade is currently off.",
+	"weight": 0,
+	"volume": 0,
+	"to_hit": 2,
+	"color": "dark_gray",
+	"symbol": "{",
+	"material": [ "omni_alloy" ],
+	"bashing": 100,
+	"cutting": 200,
+	"flags": [ "UNBREAKABLE_MELEE", "REACH_ATTACK", "REACH2", "TRADER_AVOID" ],
+	"use_action": {
+	  "type": "transform",
+	  "msg": "You activate the blade.",
+	  "target": "omni_spear_on",
+	  "active": true
+    }
+  },
+  {
+    "type": "GENERIC",
+	"looks_like": "spear_steel",
+	"id": "omni_spear_on",
+	"name": "Omni Corp. energy spear",
+	"name_plural": "Omni Corp. energy spears",
+	"description": "A long hafted hard-light edged spear, issued to Omni Corp. Personel in hazardous environs. The blade is currently on.",
+	"weight": 0,
+	"volume": 0,
+	"to_hit": 5,
+	"color": "dark_gray",
+	"symbol": "{",
+	"material": [ "omni_alloy" ],
+	"bashing": 150,
+	"cutting": 300,
+	"flags": [ "UNBREAKABLE_MELEE", "REACH_ATTACK", "REACH2", "TRADER_AVOID" ],
+	"use_action": {
+	  "type": "transform",
+	  "msg": "You deactivate the blade.",
+	  "target": "omni_spear",
+	  "active": false
+    }
   }
 ]

@@ -75,7 +75,7 @@
 	  [ "VISE", 99 ],
 	  [ "FILE", 99 ],
 	  [ "REAM", 99 ] ], 
-	"flags": [ "UNBREAKABLE_MELEE", "BELT_CLIP", "DIG_TOOL", "SAFECRACK", "TRADER_AVOID", "SAFECRACK" ] 
+	"flags": [ "UNBREAKABLE_MELEE", "BELT_CLIP", "DIG_TOOL", "SAFECRACK", "TRADER_AVOID" ] 
   },
     { 
     "id": "omni_tool_2", 

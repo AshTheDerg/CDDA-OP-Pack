@@ -339,7 +339,7 @@
     "id": "omni_baskets",
     "name": "Omni Corp. storage bin",
     "symbol": "o",
-    "looks_like": "basketlg",
+    "looks_like": "basketsm",
     "color": "brown",
     "broken_symbol": "#",
     "broken_color": "brown",

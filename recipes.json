@@ -142,6 +142,18 @@
 	"flags": [ "BLIND_EASY" ],	
 	"components": [ [ [ "scrap", 1 ] ] ]
   },
+  { 
+    "type": "recipe", 
+	"category": "CC_WEAPON", 
+	"subcategory": "CSC_WEAPON_CUTTING", 
+	"result": "omni_spear", 
+	"skill_used": "fabrication", 
+	"difficulty": 0, 
+	"time": 0, 
+	"autolearn": true,
+	"flags": [ "BLIND_EASY" ],	
+	"components": [ [ [ "scrap", 1 ] ] ]
+  },
   {
     "type": "recipe",
     "result": "omni_food",
