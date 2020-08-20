@@ -257,5 +257,5 @@
 	  "autolearn": true,
 	  "flags": [ "BLIND_EASY" ],
 	  "components": [ [ [ "scrap", 1 ] ] ]
-  },
+  }
 ]
