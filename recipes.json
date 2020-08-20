@@ -10,6 +10,18 @@
 	"autolearn": true,
 	"flags": [ "BLIND_EASY" ],
 	"components": [ [ [ "rag", 1 ] ] ]
+  },
+  { 
+    "type": "recipe", 
+	"category": "CC_ARMOR", 
+	"subcategory": "CSC_ARMOR_STORAGE", 
+	"result": "omni_bag", 
+	"skill_used": "tailor", 
+	"difficulty": 0, 
+	"time": 0, 
+	"autolearn": true,
+	"flags": [ "BLIND_EASY" ],
+	"components": [ [ [ "rag", 1 ] ] ]
   }, 
   { 
     "type": "recipe", 
@@ -40,6 +52,17 @@
 	"category": "CC_ARMOR", 
 	"subcategory": "CSC_ARMOR_SUIT", 
 	"result": "omni_armor", 
+	"skill_used": "fabrication", 
+	"difficulty": 0, 
+	"time": 0,  
+	"autolearn": true, 
+	"components": [ [ [ "scrap", 1 ] ] ]
+  },
+  { 
+    "type": "recipe", 
+	"category": "CC_ARMOR", 
+	"subcategory": "CSC_ARMOR_SUIT", 
+	"result": "omni_armor_helm", 
 	"skill_used": "fabrication", 
 	"difficulty": 0, 
 	"time": 0,  
@@ -201,5 +224,38 @@
 	"autolearn": true, 
 	"flags": [ "BLIND_EASY" ],
 	"components": [ [ [ "scrap", 1 ] ] ]
-  }
+  },
+  {
+    "type": "recipe",
+	  "category": "CC_OTHER",
+	  "result": "omni_bio_power",
+	  "skill_used": "fabrication",
+	  "difficulty": 0,
+	  "time": 0,
+	  "autolearn": true,
+	  "flags": [ "BLIND_EASY" ],
+	  "components": [ [ [ "scrap", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+	  "category": "CC_OTHER",
+	  "result": "omni_bio_lift",
+	  "skill_used": "fabrication",
+	  "difficulty": 0,
+	  "time": 0,
+	  "autolearn": true,
+	  "flags": [ "BLIND_EASY" ],
+	  "components": [ [ [ "scrap", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+	  "category": "CC_OTHER",
+	  "result": "omni_bio_enhance",
+	  "skill_used": "fabrication",
+	  "difficulty": 0,
+	  "time": 0,
+	  "autolearn": true,
+	  "flags": [ "BLIND_EASY" ],
+	  "components": [ [ [ "scrap", 1 ] ] ]
+  },
 ]
