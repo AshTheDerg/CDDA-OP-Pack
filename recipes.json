@@ -22,7 +22,31 @@
 	"autolearn": true,
 	"flags": [ "BLIND_EASY" ],
 	"components": [ [ [ "rag", 1 ] ] ]
-  }, 
+  },
+  { 
+    "type": "recipe", 
+	"category": "CC_ARMOR", 
+	"subcategory": "CSC_ARMOR_STORAGE", 
+	"result": "omni_holster", 
+	"skill_used": "tailor", 
+	"difficulty": 0, 
+	"time": 0, 
+	"autolearn": true,
+	"flags": [ "BLIND_EASY" ],
+	"components": [ [ [ "rag", 1 ] ] ]
+  },
+  { 
+    "type": "recipe", 
+	"category": "CC_ARMOR", 
+	"subcategory": "CSC_ARMOR_STORAGE", 
+	"result": "omni_sheath", 
+	"skill_used": "tailor", 
+	"difficulty": 0, 
+	"time": 0, 
+	"autolearn": true,
+	"flags": [ "BLIND_EASY" ],
+	"components": [ [ [ "rag", 1 ] ] ]
+  },
   { 
     "type": "recipe", 
 	"category": "CC_OTHER", 
@@ -56,6 +80,7 @@
 	"difficulty": 0, 
 	"time": 0,  
 	"autolearn": true, 
+	"flags": [ "BLIND_EASY" ],
 	"components": [ [ [ "scrap", 1 ] ] ]
   },
   { 
@@ -68,6 +93,17 @@
 	"time": 0,  
 	"autolearn": true, 
 	"components": [ [ [ "scrap", 1 ] ] ]
+  },
+  { 
+    "type": "recipe", 
+	"category": "CC_ARMOR", 
+	"subcategory": "CSC_ARMOR_STORAGE", 
+	"result": "omni_ammo_carrier", 
+	"skill_used": "fabrication", 
+	"difficulty": 0, 
+	"time": 0,  
+	"autolearn": true, 
+	"components": [ [ [ "rag", 1 ] ] ]
   },
   { 
     "type": "recipe", 
@@ -102,6 +138,7 @@
 	"difficulty": 0,
 	"time": 0,
 	"autolearn": true,
+	"charges": 100,
 	"flags": [ "BLIND_EASY" ],
 	"components": [ [ [ "scrap", 1 ] ] ]
   },
@@ -161,6 +198,18 @@
 	"skill_used": "fabrication", 
 	"difficulty": 0, 
 	"time": 0, 
+	"autolearn": true,
+	"flags": [ "BLIND_EASY" ],	
+	"components": [ [ [ "scrap", 1 ] ] ]
+  },
+  { 
+    "type": "recipe", 
+	"category": "CC_WEAPON", 
+	"subcategory": "CSC_WEAPON_CUTTING", 
+	"result": "omni_thrown_knife", 
+	"skill_used": "fabrication", 
+	"difficulty": 0, 
+	"time": 0,
 	"autolearn": true,
 	"flags": [ "BLIND_EASY" ],	
 	"components": [ [ [ "scrap", 1 ] ] ]

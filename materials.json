@@ -8,7 +8,8 @@
     "specific_heat_solid": 0,
     "latent_heat": 9999,
     "bash_resist": 9999,
-    "cut_resist": 9999,
+    "cut_resist": 9999,	
+    "bullet_resist": 99999999,
     "acid_resist": 9999999,
     "fire_resist": 9999999,
     "elec_resist": 9999999,
@@ -34,6 +35,7 @@
     "material": "omni_alloy",
     "symbol": ",",
     "color": "light_gray",
-    "ammo_type": "components"
+    "ammo_type": "components",
+	"flags": [ "ZERO_WEIGHT" ]
   }
 ]

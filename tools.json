@@ -13,9 +13,16 @@
 	"symbol": ";",
 	"color": "light_green",
     "ammo": "battery",
-	"magazines": [ [ "battery", [ "omni_battery_mag" ] ] ],
-	"max_charges": 99999999,
-	"flags": [ "IS_UPS", "NO_UNLOAD", "RECHARGE" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "999 L",
+        "max_contains_weight": "0 kg",
+        "item_restriction": [ "omni_battery_mag" ]
+      }
+    ],
+	"flags": [ "IS_UPS", "NO_UNLOAD", "RECHARGE", "ZERO_WEIGHT" ]
   },
   { 
     "id": "omni_tool", 
@@ -74,8 +81,10 @@
 	  [ "GRIND", 99 ],
 	  [ "VISE", 99 ],
 	  [ "FILE", 99 ],
-	  [ "REAM", 99 ] ], 
-	"flags": [ "UNBREAKABLE_MELEE", "BELT_CLIP", "DIG_TOOL", "SAFECRACK", "TRADER_AVOID" ] 
+	  [ "REAM", 99 ],
+	  [ "HOSE", 99 ],
+      [ "DRILL_ROCK", 99 ]  ], 
+	"flags": [ "UNBREAKABLE_MELEE", "BELT_CLIP", "DIG_TOOL", "SAFECRACK", "TRADER_AVOID", "ZERO_WEIGHT" ] 
   },
     { 
     "id": "omni_tool_2", 
@@ -91,170 +100,88 @@
 	"symbol": ";", 
 	"color": "white", 
 	"use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_fabric",
+        "materials": [ "cotton", "leather", "lycra", "nylon", "wool", "fur", "faux_fur", "nomex", "kevlar", "kevlar_layered", "gutskin" ],
+        "skill": "tailor",
+        "tool_quality": 999,
+        "cost_scaling": 999,
+        "move_cost": 0
+      },
 	  {
-	    "menu_text": "Pick a lock",
-	    "type": "picklock", 
-		"pick_quality": 999
-	  },
-	  {
-	    "menu_text": "Mine some stone!",
-		"type": "PICKAXE",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Repair Fabric",
 		"type": "repair_item",
-		"skill": "tailor",
-		"item_action_type": "repair_fabric",
-		"materials": [ "cotton", "leather", "wool", "fur", "nomex", "neoprene", "kevlar", "faux_fur" ],
-		"tool_quality": 999,
-		"cost_scaling": 999
-	  },
-	  {
-	    "menu_text": "Repair Metal",
-		"type": "repair_item",
-		"skill": "mechanics",
 		"item_action_type": "repair_metal",
 		"materials": [ "iron", "steel", "hardsteel", "aluminum", "copper", "silver", "gold", "superalloy", "brass", "budget_steel", "lead", "platinum",  "wood", "bone", "plastic", "ceramic", "clay", "diamond", "glass", "paper", "stone" ],
+		"skill": "mechanics",		
 		"tool_quality": 999,
-		"cost_scaling": 999
+		"cost_scaling": 999,
+		"move_cost": 0
 	  },
 	  {
-	    "menu_text": "Repair Guns",
-		"type": "GUN_REPAIR",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Activate the Hotplate",
-		"type": "HOTPLATE",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Purify Water",
-		"type": "WATER_PURIFIER",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Draw Blood",
-		"type": "BLOOD_DRAW",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Check the Geiger Counter",
-		"type": "GEIGER",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Mop up",
-		"type": "MOP",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Siphon",
-		"type": "SIPHON",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Wash Items",
-		"type": "WASH_ALL_ITEMS",
-		"tool_quality": 999,
-		"cost_scaling": 0
-	  },
-	  {
-	    "menu_text": "Make some noise!",
 		"type": "manualnoise",
-		"noise": 100,
+		"noise": 1000,
 		"noise_message": "BEEEEEEEEEEEEP!",
 		"use_message": "Your tool makes a really loud beep!",
 		"no_charges_message": "That shouldn't happen..."
 	  },
-	  {
-	    "menu_text": "Take a picture",
-		"type": "CAMERA"
-	  },
-	  {
-	    "menu_text": "Robot Control",
-		"type": "ROBOTCONTROL",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Find Signals",
-		"type": "DIRECTIONAL_ANTENNA",
-		"tool_quality": 999
-	  },
-	  {
-	   "menu_text": "Go fishing",
-	   "type": "FISH_ROD"
-	  },
-	  {
-	   "menu_text": "Check the Weather",
-	   "type": "WEATHER_TOOL"
-	  },
-	  {
-	    "menu_text": "Teleporter (BETA!)",
-		"type": "TELEPORT",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Use the crowbar",
-		"type": "CROWBAR",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Use the Boltcutters",
-		"type": "BOLTCUTTERS",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Steal Mind",
-		"type": "MIND_SPLICER",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Confuse Zombies",
-		"type": "PHEROMONE",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Use the Dog Whistle",
-		"type": "DOG_WHISTLE",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Activate the Radio Control",
-		"type": "RADIOCONTROL",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Do your hair!",
-		"type": "HAIRKIT",
-		"tool_quality": 999
-	  },
-	  {
-	    "menu_text": "Use the shaver",
-		"type": "SHAVEKIT",
-		"tool_quality": 999
-	  }
-	], 
-	"flags": [ "UNBREAKABLE_MELEE", "BELT_CLIP", "FIRE", "FISH_GOOD", "WRITE_MESSAGE", "TRADER_AVOID", "FISH_GOOD" ] 
+    "PICKAXE",
+	"PICK_LOCK",
+	"CAMERA",
+	"CROWBAR",
+	"HAMMER",
+	"GEIGER",
+	"EINKTABLETPC",
+	"HOTPLATE",
+	"HEAT_FOOD",
+	"WATER_PURIFIER",
+	"firestarter",
+	"EXTINGUISHER",
+	"FISH_ROD",
+	"MAKEMOUND",
+	"AUTOCLAVE",
+	"WEATHER_TOOL",
+	"BLOOD_DRAW",
+	"BOLTCUTTERS",
+	"MIND_SPLICER",
+	"RADIOCONTROL",
+	"PORTAL",
+	"TELEPORT",
+	"HAIRKIT",
+	"SHAVEKIT",
+	"MOP",
+	"WASH_ALL_ITEMS",
+	"JACKHAMMER",
+	"GUN_REPAIR",
+	"DIRECTIONAL_ANTENNA",
+	"DOG_WHISTLE"
+	],
+    "qualities": [ [ "LOCKPICK", 999 ] ],
+	"flags": [ "UNBREAKABLE_MELEE", "BELT_CLIP", "FIRE", "FISH_GOOD", "WRITE_MESSAGE", "TRADER_AVOID", "CAMERA_PRO", "ZOOM", "ZERO_WEIGHT", "PERFECT_LOCKPICK" ] 
   },
   {
     "id": "omni_canteen",
 	"looks_like": "21canteen",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "Omni Corp. canteen" },
     "description": "A large canteen produced by Omni Corp.",
     "weight": "0 g",
-    "volume": "1 ml",
+    "volume": "0 ml",
     "price": 0,
     "material": "omni_alloy",
     "symbol": ")",
     "color": "dark_gray",
-    "contains": "2000 L",
-    "seals": true,
-    "watertight": true,
-    "armor_data": { "covers": [ "TORSO" ], "coverage": 10, "encumbrance": 4, "material_thickness": 2 },
-    "flags": [ "WAIST", "OVERSIZE", "WATER_FRIENDLY" ]
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "999 ml",
+        "max_contains_weight": "999 kg"
+      }
+    ],
+    "armor_data": { "covers": [ "torso" ], "coverage": 0, "encumbrance": 0, "material_thickness": 99 },
+    "flags": [ "WAIST", "OVERSIZE", "WATERPROOF", "ZERO_WEIGHT", "TARDIS" ]
   }
 ]

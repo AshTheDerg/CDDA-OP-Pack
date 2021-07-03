@@ -4,7 +4,7 @@
   "type": "bionic",
   "name": "Omni Corp. bionic power package",
   "description": "The Omni Corp. Bionic Power Package is standard issue for Omni Corp. Personel. It contains a proprietary Reactor and Battery Pack.",
-  "occupied_bodyparts": [ [ "TORSO", 1 ], [ "ARM_L", 1 ], [ "ARM_R", 1 ], [ "LEG_L", 1 ], [ "LEG_R", 1 ] ],
+  "occupied_bodyparts": [ [ "torso", 1 ], [ "arm_l", 1 ], [ "arm_r", 1 ], [ "leg_l", 1 ], [ "leg_r", 1 ] ],
   "capacity": "2000 kJ",
   "fuel_options": [ "muscle" ],
   "fuel_efficiency": 2000,
@@ -17,7 +17,7 @@
   "type": "bionic",
   "name": "Omni Corp. bionic lift package",
   "description": "The Omni Corp. Bionic Lift Package is standard issue for Omni Corp. Personel. It contains heavy duty hydraulics for the arms and legs.",
-  "weight_capacity_bonus": "999999 kg",
+  "weight_capacity_bonus": "9999999 kg",
   "stat_bonus": [ [ "STR", 5 ], [ "DEX", 5 ] ],
   "included": true,
   "flags": [ "BIONIC_SHOCKPROOF", "BIONIC_NPC_USABLE" ]
@@ -28,9 +28,9 @@
   "name": "Omni Corp. bionic enhancement package",
   "description": "The Omni Corp. Bionic Enhancement Package is standard issue for Omni Corp. Personel. It contains Enhancements for every aspect of your life!",
   "stat_bonus": [ [ "STR", 5 ], [ "DEX", 5 ], [ "INT", 5 ], [ "PER", 5 ] ],
-  "env_protec": [ [ "TORSO", 9999999 ], [ "ARM_L", 9999999 ], [ "ARM_R", 9999999 ], [ "LEG_L", 9999999 ], [ "LEG_R", 9999999 ], [ "HEAD", 9999999 ], [ "EYES", 9999999 ], [ "MOUTH", 9999999 ], [ "HAND_L", 9999999 ], [ "HAND_R", 9999999 ], [ "FOOT_L", 9999999 ], [ "FOOT_R", 9999999 ] ],
-  "bash_protec": [ [ "TORSO", 9999999 ], [ "ARM_L", 9999999 ], [ "ARM_R", 9999999 ], [ "LEG_L", 9999999 ], [ "LEG_R", 9999999 ], [ "HEAD", 9999999 ], [ "EYES", 9999999 ], [ "MOUTH", 9999999 ], [ "HAND_L", 9999999 ], [ "HAND_R", 9999999 ], [ "FOOT_L", 9999999 ], [ "FOOT_R", 9999999 ] ],
-  "cut_protec": [ [ "TORSO", 9999999 ], [ "ARM_L", 9999999 ], [ "ARM_R", 9999999 ], [ "LEG_L", 9999999 ], [ "LEG_R", 9999999 ], [ "HEAD", 9999999 ], [ "EYES", 9999999 ], [ "MOUTH", 9999999 ], [ "HAND_L", 9999999 ], [ "HAND_R", 9999999 ], [ "FOOT_L", 9999999 ], [ "FOOT_R", 9999999 ] ],
+  "env_protec": [ [ "torso", 9999999 ], [ "arm_l", 9999999 ], [ "arm_r", 9999999 ], [ "leg_l", 9999999 ], [ "leg_r", 9999999 ], [ "head", 9999999 ], [ "eyes", 9999999 ], [ "mouth", 9999999 ], [ "hand_l", 9999999 ], [ "hand_r", 9999999 ], [ "foot_l", 9999999 ], [ "foot_r", 9999999 ] ],
+  "bash_protec": [ [ "torso", 9999999 ], [ "arm_l", 9999999 ], [ "arm_r", 9999999 ], [ "leg_l", 9999999 ], [ "leg_r", 9999999 ], [ "head", 9999999 ], [ "eyes", 9999999 ], [ "mouth", 9999999 ], [ "hand_l", 9999999 ], [ "hand_r", 9999999 ], [ "foot_l", 9999999 ], [ "foot_r", 9999999 ] ],
+  "cut_protec": [ [ "torso", 9999999 ], [ "arm_l", 9999999 ], [ "arm_r", 9999999 ], [ "leg_l", 9999999 ], [ "leg_r", 9999999 ], [ "head", 9999999 ], [ "eyes", 9999999 ], [ "mouth", 9999999 ], [ "hand_l", 9999999 ], [ "hand_r", 9999999 ], [ "foot_l", 9999999 ], [ "foot_r", 9999999 ] ],
   "included": true,
   "flags": [ "BIONIC_SHOCKPROOF", "BIONIC_NPC_USABLE" ]
 },
@@ -48,7 +48,7 @@
   "symbol": ":",
   "color": "yellow",
   "use_action": "install_bionic",
-  "flags": [ "CBM" ],
+  "flags": [ "CBM", "ZERO_WEIGHT" ],
   "bionic_id": "omni_bionic_power",
   "is_upgrade": false
 },
@@ -66,7 +66,7 @@
   "symbol": ":",
   "color": "yellow",
   "use_action": "install_bionic",
-  "flags": [ "CBM" ],
+  "flags": [ "CBM", "ZERO_WEIGHT" ],
   "bionic_id": "omni_bionic_lift",
   "is_upgrade": false
 },
@@ -84,7 +84,7 @@
   "symbol": ":",
   "color": "yellow",
   "use_action": "install_bionic",
-  "flags": [ "CBM" ],
+  "flags": [ "CBM", "ZERO_WEIGHT" ],
   "bionic_id": "omni_bionic_enhance",
   "is_upgrade": false
 }

@@ -6,12 +6,11 @@
     "comestible_type": "FOOD",
     "name": { "str": "Omni Corp. field ration" },
     "description": "Field rations produced by Omni Corp. for their personel.",
-    "weight": "0 g",
+    "weight": "1 g",
     "volume": "1 ml",
     "price": 0,
     "flags": [ "EDIBLE_FROZEN", "CARNIVORE_OK", "MYCUS_OK" ],
     "healthy": 999,
-	"heal": 999,
     "fun": 999,
     "quench": 99999,
     "material": [ "fruit", "veggy" ],
@@ -77,6 +76,6 @@
 	    "type": "XANAX"
 	  }
 	],
-    "flags": [ "NPC_SAFE" ]
+    "flags": [ "NPC_SAFE", "ZERO_WEIGHT" ]
   }
 ]

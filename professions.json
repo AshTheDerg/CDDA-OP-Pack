@@ -7,9 +7,12 @@
 	"points": 0,
 	"items": {
 	  "both": {
-	    "ammo": 100,
-		"items": [ "jeans", "socks", "tshirt", "omni_armor", "omni_armor_helm", "omni_bag", "omni_pack", "omni_pistol", "omni_knife", "omni_tool", "omni_tool_2" ],
-		"entries": [ { "item": "omni_mag", "ammo-item": "omni_ammo", "charges": 10 }, { "item": "omni_mag", "ammo-item": "omni_ammo", "charges": 10 }, { "item": "omni_mag", "ammo-item": "omni_ammo", "charges": 10 } ] },
+		"items": [ "jeans", "socks", "tshirt", "omni_armor", "omni_armor_helm", "omni_bag", "omni_pack", "omni_tool", "omni_tool_2" ],
+		"entries": [ { "item": "omni_mag", "ammo-item": "omni_ammo", "charges": 100 }, 
+					 { "item": "omni_mag", "ammo-item": "omni_ammo", "charges": 100 },
+					 { "item": "omni_mag", "ammo-item": "omni_ammo", "charges": 100 },
+					 { "item": "omni_knife", "container-item": "omni_sheath" },
+					 { "item": "omni_pistol", "ammo-item": "omni_ammo", "container-item": "omni_holster", "charges": 100 } ] },
 		"male": [ "boxer_shorts" ],
 		"female": [ "bra", "panties" ] },
 	"CBMs": [ "omni_bionic_power", "omni_bionic_lift", "omni_bionic_enhance" ],

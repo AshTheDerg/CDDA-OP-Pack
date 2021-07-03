@@ -5,22 +5,27 @@
 	"type": "ARMOR", 
 	"name": "Omni Corp. backpack", 
 	"description": "The OMNI Pack is the pack for all your hiking needs! Now with Interdimensional Storage Space! (Warning, OMNI Corp. is not responisble for injuries resulting from placing multiple Interdimensional Storage Devices within each other).", 
-	"weight": 0, 
-	"volume": 0, 
+	"weight": "1 g", 
+	"volume": "1 L", 
 	"price": 0, 
 	"material": [ "omni_alloy" ], 
 	"symbol": "[", 
 	"color": "blue", 
-	"covers": [ "TORSO" ], 
-	"coverage": 100, 
-	"encumbrance": 0, 
-	"storage": 9999,  
+	"covers": [ "torso" ], 
+	"coverage": 1, 
+	"encumbrance": 0,  
 	"warmth": 0, 
-	"material_thickness": 99,  
-	"environmental_protection": 9999, 
-	"weight_capacity_bonus": "9999 kg", 
-	"weight_capacity_modifier": 9999,
-	"flags": [ "BELTED", "WATERPROOF", "TRADER_AVOID" ]
+	"material_thickness": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "999999 L",
+        "max_contains_weight": "999999 kg",
+        "max_item_length": "99999999 cm",
+        "moves": 1
+      }
+    ],
+	"flags": [ "BELTED", "WATERPROOF", "TRADER_AVOID", "TARDIS", "SEMITANGIBLE" ]
   },
   { 
     "id": "omni_bag",
@@ -28,23 +33,147 @@
 	"type": "ARMOR", 
 	"name": "Omni Corp. bag", 
 	"description": "The OMNI Bag is the civilian release of the Omni Corp. Omni Pack! Now with Interdimensional Storage Space! (Warning, OMNI Corp. is not responisble for injuries resulting from placing multiple Interdimensional Storage Devices within each other).", 
-	"weight": 0, 
-	"volume": 0, 
+	"weight": "1 g", 
+	"volume": "1 L", 
 	"price": 0, 
 	"material": [ "omni_alloy" ], 
 	"symbol": "[", 
 	"color": "blue", 
-	"covers": [ "TORSO" ], 
-	"coverage": 100, 
-	"encumbrance": 0, 
-	"storage": 9999,  
+	"covers": [ "torso" ], 
+	"coverage": 1, 
+	"encumbrance": 0,  
 	"warmth": 0, 
+	"material_thickness": 1,
+	"pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "999999 L",
+        "max_contains_weight": "999999 kg",
+        "max_item_length": "99999999 cm",
+        "moves": 1
+      }
+    ],
+	"flags": [ "BELTED", "WATERPROOF", "TRADER_AVOID", "TARDIS", "SEMITANGIBLE" ]
+  },
+  {
+    "id": "omni_ammo_carrier",
+	"looks_like": "chestrig",
+	"type": "ARMOR",
+	"name": "Omni Corp. ammo carrier",
+	"description": "An ammo carrier for Omni Corp. cells and belts",
+	"weight": 0,
+	"volume": 0,
+	"price": 0,
+	"material": [ "omni_alloy" ],
+	"symbol": "[",
+	"color": "dark_gray",
+	"covers": [ "torso" ],
+	"coverage": 100,
 	"material_thickness": 99,
-	"evironmental_protection": 0,
-	"weight_capacity_bonus": "9999 kg", 
-	"weight_capacity_modifier": 9999,
-	"flags": [ "BELTED", "WATERPROOF", "TRADER_AVOID" ]
-  }, 
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "9999999 mm",
+        "max_contains_volume": "99999999 ml",
+        "max_contains_weight": "99999999 kg",
+        "moves": 0,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "9999999 mm",
+        "max_contains_volume": "99999999 ml",
+        "max_contains_weight": "99999999 kg",
+        "moves": 0,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "99999 mm",
+        "max_contains_volume": "999999 ml",
+        "max_contains_weight": "999999 kg",
+        "moves": 0,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_item_length": "9999999 mm",
+        "max_contains_volume": "99999999 ml",
+        "max_contains_weight": "99999999 kg",
+        "moves": 0,
+        "flag_restriction": [ "MAG_COMPACT", "MAG_BULKY" ]
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Stash ammo", "holster_msg": "You stash your %s." },
+    "flags": [ "WATERPROOF", "BELTED", "TRADER_AVOID", "ZERO_WEIGHT", "TARDIS", "SEMITANGIBLE" ]
+  },
+  {
+    "id": "omni_holster",
+    "type": "ARMOR",
+    "name": { "str": "Omni Corp. holster" },
+    "description": "A much lighter, and tougher, holster for Omni Corp. units.",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "omni_alloy" ],
+    "symbol": "[",
+    "looks_like": "sheath",
+    "color": "light_gray",
+    "covers": [ "leg_l", "leg_r" ],
+    "sided": true,
+    "coverage": 5,
+    "encumbrance": 0,
+    "max_encumbrance": 0,
+    "material_thickness": 99,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+		"rigid": true,
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "99999999 ml",
+        "max_contains_weight": "99999999 kg",
+        "max_item_length": "99999999 cm",
+        "moves": 0
+      }
+    ],
+    "use_action": { "type": "holster" },
+    "flags": [ "WAIST", "OVERSIZE", "TRADER_AVOID", "WATERPROOF", "ZERO_WEIGHT", "TARDIS", "SEMITANGIBLE" ]
+  },
+  {
+    "id": "omni_sheath",
+    "type": "ARMOR",
+    "name": { "str": "Omni Corp. sheath", "str_pl": "Omni Corp. sheathes" },
+    "description": "A much lighter, and tougher, sheath for Omni Corp. units.",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "material": [ "omni_alloy" ],
+    "symbol": "|",
+    "looks_like": "scabbard",
+    "color": "brown",
+    "covers": [ "leg_l", "leg_r" ],
+    "sided": true,
+    "coverage": 5,
+    "max_encumbrance": 0,
+    "material_thickness": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+		"rigid": true,
+        "holster": true,
+        "max_contains_volume": "99999999 ml",
+        "max_contains_weight": "99999999 kg",
+        "max_item_length": "99999999 cm",
+        "moves": 0,
+        "flag_restriction": [ "SHEATH_KNIFE", "SHEATH_SWORD" ]
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Sheath knife", "holster_msg": "You sheath your %s" },
+    "flags": [ "WAIST", "OVERSIZE", "WATERPROOF", "TRADER_AVOID", "ZERO_WEIGHT", "TARDIS", "SEMITANGIBLE" ]
+  },
   { 
     "id": "omni_armor",
 	"looks_like": "power_armor_light",
@@ -63,16 +192,17 @@
 	"price": 0, 
 	"material": [ "omni_alloy" ], 
 	"symbol": "[", 
-	"color": "green", 
-	"covers": [ "LEGS", "TORSO", "ARMS", "HANDS", "FEET" ], 
-	"coverage": 100, 
-	"encumbrance": 0, 
-	"storage": 9999, 
+	"color": "green",
+	"armor_portion_data": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 0, 0 ] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 0, 0 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 0, 0 ] }
+    ],
 	"warmth": 100, 
 	"material_thickness": 999, 
 	"environmental_protection": 9999, 
 	"qualities": [ [ "GLARE", 10 ] ], 
-	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "OVERSIZE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID" ]
+	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "OVERSIZE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "ZERO_WEIGHT", "TARDIS", "BULLET_IMMUNE" ]
   }, 
   { 
     "id": "omni_armor_on",
@@ -94,15 +224,16 @@
 	"material": [ "omni_alloy" ], 
 	"symbol": "[", 
 	"color": "green", 
-	"covers": [ "LEGS", "TORSO", "ARMS", "HANDS", "FEET" ], 
-	"coverage": 100, 
-	"encumbrance": 0, 
-	"storage": 9999, 
+	"armor_portion_data": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 0, 0 ] },
+      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 0, 0 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 0, 0 ] }
+    ],
 	"warmth": 100, 
 	"material_thickness": 999, 
 	"environmental_protection": 9999, 
 	"qualities": [ [ "GLARE", 10 ] ], 
-	"flags": [ "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "OVERSIZE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "LIGHT_1000" ]
+	"flags": [ "ZERO_WEIGHT", "ALARMCLOCK", "ALLOWS_NATURAL_ATTACKS", "BAROMETER", "BLOCK_WHILE_WORN", "CLIMATE_CONTROL", "ELECTRIC_IMMUNE", "ONLY_ONE", "OVERSIZE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "LIGHT_1000", "TARDIS" ]
   },
   {
     "id": "omni_armor_helm",
@@ -124,13 +255,13 @@
 	"material": [ "omni_alloy" ],
 	"symbol": "[",
 	"color": "green",
-	"covers": [ "HEAD", "MOUTH" ],
+	"covers": [ "head", "mouth" ],
 	"coverage": 100,
 	"encumbrance": 0,
 	"warmth": 100,
 	"material_thickness": 999,
 	"environmental_protection": 9999,
-	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF" ]
+	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "VARSIZE", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF", "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_armor_helm_on",
@@ -152,13 +283,13 @@
 	"material": [ "omni_alloy" ],
 	"symbol": "[",
 	"color": "green",
-	"covers": [ "HEAD", "MOUTH", "EYES" ],
+	"covers": [ "head", "mouth", "eyes" ],
 	"coverage": 100,
 	"encumbrance": 0,
 	"warmth": 100,
 	"material_thickness": 999,
 	"environmental_protection": 9999,
 	"qualities": [ [ "GLARE", 10 ] ],
-	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF", "FIX_FARSIGHT", "FIX_NEARSIGHT", "FLASH_PROTECTION", "SWIM_GOGGLES", "SUN_GLASSES", "VARSIZE" ]
+	"flags": [ "ELECTRIC_IMMUNE", "ONLY_ONE", "RAD_PROOF", "WATERPROOF", "SLOWS_THIRST", "TRADER_AVOID", "PARTIAL_DEAF", "FIX_FARSIGHT", "FIX_NEARSIGHT", "FLASH_PROTECTION", "SWIM_GOGGLES", "SUN_GLASSES", "VARSIZE", "ZERO_WEIGHT" ]
   }
 ]

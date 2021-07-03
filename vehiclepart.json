@@ -2,7 +2,7 @@
   {
     "id": "omni_battery",
     "type": "vehicle_part",
-    "name": "Omni Corp. vehicle battery",
+    "name": { "str": "Omni Corp. vehicle battery" },
     "item": "omni_battery_car",
     "fuel_type": "battery",
     "symbol": "o",
@@ -12,11 +12,11 @@
     "description": "A battery for storing electrical power, and discharging it to power electrical devices built into the vehicle.",
     "folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "FOLDABLE" ]
+    "flags": [ "FOLDABLE", "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_battery_car",
@@ -24,14 +24,15 @@
     "category": "veh_parts",
     "name": { "str": "Omni Corp. vehicle battery", "str_pl": "Omni Corp. vehicle batteries" },
     "description": "A battery made by Omni Corp.",
-    "weight": "0 g",
-    "volume": "0 ml",
+    "weight": "1 g",
+    "volume": "1 ml",
     "price": 4000,
     "material": [ "omni_alloy" ],
     "symbol": ":",
     "color": "light_cyan",
-    "ammo_type": "battery",
-    "capacity": 9999999,
+    "ammo_type": [ "battery" ],
+	"capacity": 9999999,
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 9999999 } } ],
     "flags": [ "NO_SALVAGE", "NO_UNLOAD", "NO_RELOAD", "RECHARGE" ]
   },
   {
@@ -48,9 +49,9 @@
     "energy_consumption": 1,
 	"folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
     "damage_modifier": 80,
     "damage_reduction": { "all": 9999999 },
@@ -58,7 +59,7 @@
     "noise_factor": 0,
     "m2c": 90,
     "fuel_type": "battery",
-    "flags": [ "ENGINE", "E_HIGHER_SKILL", "E_HEATER", "E_ALTERNATOR", "FOLDABLE" ]
+    "flags": [ "ENGINE", "E_HIGHER_SKILL", "E_HEATER", "E_ALTERNATOR", "FOLDABLE", "ZERO_WEIGHT" ]
   },
   {
     "type": "GENERIC",
@@ -72,7 +73,8 @@
     "volume": "0 L",
     "bashing": 4,
     "category": "veh_parts",
-    "price": 12000
+    "price": 12000,
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_plate",
@@ -88,11 +90,11 @@
     "folded_volume": "1 ml",
     "description": "Omni Corp. Armor Plating. Will protect other components on the same frame from damage.",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "ARMOR", "FOLDABLE" ],
+    "flags": [ "ARMOR", "FOLDABLE", "ZERO_WEIGHT" ],
     "damage_reduction": { "all": 9999999, "cut": 9999999, "stab": 9999999 }
   },
   {
@@ -108,7 +110,8 @@
     "bashing": 6,
     "material": [ "omni_alloy" ],
     "symbol": "]",
-    "color": "light_cyan"
+    "color": "light_cyan",
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_fuel_tank",
@@ -126,31 +129,38 @@
     "damage_modifier": 80,
 	"folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
     "damage_reduction": { "all": 9999999, "stab": 9999999 },
-	"flags": [ "FOLDABLE" ]
+	"flags": [ "FOLDABLE", "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_drum",
-    "type": "CONTAINER",
+    "type": "GENERIC",
     "category": "container",
     "name": { "str": "Omni Corp. drum", "str_pl": "Omni Corp. drums" },
     "description": "A massive steel barrel with a resealable lid. Made by Omni Corp.",
     "weight": "0 g",
     "volume": "0 L",
-    "price": 10000,
+    "price": 0,
     "to_hit": -5,
     "bashing": 8,
     "material": "omni_alloy",
     "symbol": "0",
     "color": "dark_gray",
-    "contains": "10000 L",
-    "seals": true,
-    "watertight": true,
-    "qualities": [ [ "CONTAIN", 99 ] ]
+	"pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "999999 ml",
+        "max_contains_weight": "999999 kg"
+      }
+    ],
+    "qualities": [ [ "CONTAIN", 99 ] ],
+	"flags": [ "ZERO_WEIGHT", "TARDIS" ]
   },
   {
     "id": "omni_generator",
@@ -160,20 +170,19 @@
 	"symbol": "*",
     "color": "yellow",
     "broken_color": "red",
-    "difficulty": 0,
     "durability": 9999999,
     "power": 1,
     "epower": 9999999,
     "damage_modifier": 80,
 	"folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
     "damage_reduction": { "all": 9999999 },
     "fuel_type": "battery",
-    "flags": [ "ALTERNATOR" ]
+    "flags": [ "ALTERNATOR", "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_generator",
@@ -183,7 +192,8 @@
     "description": "An electrical generator made by Omni Corp. designed to be attached to an engine.",
     "weight": "0 g",
     "volume": "0 ml",
-    "price": 30000
+    "price": 30000,
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_frame",
@@ -197,11 +207,11 @@
     "description": "A light metal framework, designed by Omni Corp.",
     "folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "INITIAL_PART", "MOUNTABLE", "FOLDABLE" ],
+    "flags": [ "INITIAL_PART", "MOUNTABLE", "FOLDABLE", "ZERO_WEIGHT" ],
     "damage_reduction": { "all": 9999999 }
   },
   {
@@ -218,7 +228,8 @@
     "volume": "1 ml",
     "bashing": 15,
     "category": "veh_parts",
-    "price": 4000
+    "price": 4000,
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_lamp",
@@ -234,11 +245,11 @@
     "bonus": 30,
     "folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "FOLDABLE" ]
+    "flags": [ "FOLDABLE", "ZERO_WEIGHT" ]
   },
   {
     "id": "omni_lamp",
@@ -254,7 +265,7 @@
     "material": [ "omni_alloy" ],
     "symbol": ",",
     "color": "light_green",
-    "flags": [ "LIGHT_1000", "DURABLE_MELEE", "ALLOWS_REMOTE_USE" ]
+    "flags": [ "LIGHT_1000", "DURABLE_MELEE", "ALLOWS_REMOTE_USE", "ZERO_WEIGHT" ]
   },
   {
     "type": "vehicle_part",
@@ -272,11 +283,11 @@
     "location": "on_roof",
     "folded_volume": "1 ml",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "SOLAR_PANEL", "FOLDABLE" ]
+    "flags": [ "SOLAR_PANEL", "FOLDABLE", "ZERO_WEIGHT" ]
   },
   {
     "type": "GENERIC",
@@ -291,7 +302,8 @@
     "volume": "0 L",
     "bashing": 1,
     "category": "veh_parts",
-    "price": 90000
+    "price": 90000,
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "type": "GENERIC",
@@ -307,7 +319,8 @@
     "volume": "0 ml",
     "bashing": 5,
     "category": "veh_parts",
-    "price": 90000
+    "price": 90000,
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "type": "vehicle_part",
@@ -326,11 +339,11 @@
     "item": "omni_recharge_station",
     "location": "on_cargo",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "INTERNAL", "RECHARGE", "FOLDABLE", "ENABLED_DRAINS_EPOWER" ],
+    "flags": [ "INTERNAL", "RECHARGE", "FOLDABLE", "ENABLED_DRAINS_EPOWER", "ZERO_WEIGHT" ],
     "folded_volume": "1 ml",
     "damage_reduction": { "all": 9999999 }
   },
@@ -350,11 +363,11 @@
     "item": "omni_basket",
     "location": "center",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "CARGO", "BOARDABLE", "FOLDABLE" ],
+    "flags": [ "CARGO", "BOARDABLE", "FOLDABLE", "ZERO_WEIGHT" ],
     "damage_reduction": { "all": 9999999 }
   },
   {
@@ -372,7 +385,8 @@
     "techniques": [ "DEF_DISARM" ],
     "bashing": 20,
     "category": "veh_parts",
-    "qualities": [ [ "COOK", 1 ] ]
+    "qualities": [ [ "COOK", 1 ] ],
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "type": "vehicle_part",
@@ -391,11 +405,11 @@
     "item": "omni_fridge",
     "location": "center",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "CARGO", "OBSTACLE", "FRIDGE", "COVERED" ],
+    "flags": [ "CARGO", "OBSTACLE", "FRIDGE", "COVERED", "ZERO_WEIGHT" ],
     "damage_reduction": { "all": 9999999 }
   },
   {
@@ -412,7 +426,8 @@
     "volume": "0 L",
     "bashing": 8,
     "category": "veh_parts",
-    "price": 60000
+    "price": 60000,
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "type": "GENERIC",
@@ -421,7 +436,8 @@
     "description": "Compact version of a chest freezer, designed by Omni Corp.",
     "price": 0,
     "insulation": 4,
-    "copy-from": "omni_fridge"
+    "copy-from": "omni_fridge",
+	"flags": [ "ZERO_WEIGHT" ]
   },
   {
     "type": "vehicle_part",
@@ -436,14 +452,14 @@
     "durability": 9999999,
     "epower": 0,
     "size": "10000 L",
-    "item": "minifreezer",
+    "item": "omni_freezer",
     "location": "center",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "1 m", "using": [ [ "vehicle_bolt", 1 ] ] }
+      "install": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "removal": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] },
+      "repair": { "skills": [ [ "mechanics", 0 ] ], "time": "50 s", "qualities": [ { "id": "WRENCH", "level": 1 } ] }
     },
-    "flags": [ "CARGO", "OBSTACLE", "FREEZER", "COVERED" ],
+    "flags": [ "CARGO", "OBSTACLE", "FREEZER", "COVERED", "ZERO_WEIGHT" ],
     "damage_reduction": { "all": 9999999 }
   }
 ]
